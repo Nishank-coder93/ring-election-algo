@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ring Coordinator </title>
+</head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/chat.css"> -->
+
+<body>
+	<div class='jumbotron'>
+		<h1 class='text-center'> Ring Coordinator Election Algortihm </h1>
+		<h4 class='text-center'> Done By - Nishank Bhatnagar</h4>
+	</div>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				<button id='execute'> Execute </button>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12'>
+				<h1 class='text-center'> PROCESS MAIN LOG </h1>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12' id='main_log'></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/javascript/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="/javascript/moment.js"></script>
+	<script type="text/javascript" src="/javascript/queryparams.js"></script>
+	<script type="text/javascript" src="/javascript/socketio.js"></script>
+	<script type="text/javascript" src="/javascript/sockhandler.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+	$('#execute').click(function (event){
+		event.preventDefault();
+		window.open('http://localhost:3001/');
+		window.open('http://localhost:3002/');
+		window.open('http://localhost:3003/');
+		window.open('http://localhost:3004/');
+		window.open('http://localhost:3005/');
+		window.open('http://localhost:3006/');
+	});
+
+	</script>
+</body>
+</html>
