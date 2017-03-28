@@ -6,25 +6,121 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/chat.css"> -->
+<style type="text/css">
 
+	hr {margin: 0;}
+	.process-box {
+		/*border: 1px solid black;*/
+		height: 200px;
+		width: 16%;
+		margin-right: 4px;
+	}
+	.process-info {
+		border: 1px solid red;
+		height: 70%;
+		background: #ff471a;
+		color: white;
+		border-radius: 5px;
+	}
+	.crash-button {
+		height: 30%;
+		padding: 5px;
+	}
+
+	#main_log {
+		border: 1px solid red;
+		height: 500px;
+		border-radius: 5px;
+		overflow-y: auto;
+	}
+</style>
 <body>
 	<div class='jumbotron'>
 		<h1 class='text-center'> Ring Coordinator Election Algortihm </h1>
 		<h4 class='text-center'> Done By - Nishank Bhatnagar</h4>
+		<h4 class='text-center'> Press Execute to start the 6 processes </h4>
+		<div class='text-center'> <button id='execute' class='btn btn-primary pull-center'> Execute </button> </div>
+		
 	</div>
-	<div class='container'>
+	<div class='container' style=''>
 		<div class='row'>
-			<div class='col-md-12'>
-				<button id='execute'> Execute </button>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process1-info'>
+					<h5 class='text-center'> Process 1</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process1-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button'> 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process1-btn")' id='process1-btn'> Start </button></div>
+				</div>
+			</div>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process2-info'>
+					<h5 class='text-center'> Process 2</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process2-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button'> 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process2-btn")' id='process2-btn'> Start </button></div>
+				</div>
+			</div>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process3-info'>
+					<h5 class='text-center'> Process 3</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process3-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button' > 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process3-btn")' id='process3-btn'> Start </button></div>
+				</div>
+			</div>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process4-info'>
+					<h5 class='text-center'> Process 4</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process4-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button'> 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process4-btn")' id='process4-btn'> Start </button></div>
+				</div>
+			</div>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process5-info'>
+					<h5 class='text-center'> Process 5</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process5-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button' > 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process5-btn")' id='process5-btn'> Start </button></div>
+				</div>
+			</div>
+			<div class='col-md-1 container process-box'> 
+				<div class='row process-info' id='process6-info'>
+					<h5 class='text-center'> Process 6</h5> <hr> 
+					<h5 class='text-center'> <label> Status: </label> <span id='process6-status'> offline </span></h5>
+					<h5 class='text-center'> <label> Current Leader: </label> <span> Process 6</span></h5>
+					<h5 class='text-center'> <label> Election started: </label> <span> True </span> </h5>
+				</div> 
+				<div class='row crash-button' > 
+					<div class='text-center'><button class='btn btn-success' onclick='crash_start("process6-btn")' id='process6-btn'> Start </button></div>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div class='container' >
 		<div class='row'>
 			<div class='col-md-12'>
 				<h1 class='text-center'> PROCESS MAIN LOG </h1>
 			</div>
 		</div>
-		<div class='row'>
-			<div class='col-md-12' id='main_log'></div>
+		<hr>
+		<div class='row' id='log_box'>
+			<div class='col-md-12' id='main_log'> </div>
 		</div>
 	</div>
 
@@ -36,15 +132,34 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 
+	var windows = [];
+
 	$('#execute').click(function (event){
-		event.preventDefault();
-		window.open('http://localhost:3001/');
-		window.open('http://localhost:3002/');
-		window.open('http://localhost:3003/');
-		window.open('http://localhost:3004/');
-		window.open('http://localhost:3005/');
-		window.open('http://localhost:3006/');
+		//event.preventDefault();
+		windows['1'] = window.open('http://localhost:3001/');
+		windows['2'] = window.open('http://localhost:3002/');
+		windows['3'] = window.open('http://localhost:3003/');
+		windows['4'] = window.open('http://localhost:3004/');
+		windows['5'] = window.open('http://localhost:3005/');
+		windows['6'] = window.open('http://localhost:3006/');
 	});
+
+	function crash_start(id) {
+		var btn_id = "#" + id;
+		var str = id.split('-');
+		var charLen = str[0].length;
+		var prc_id = str[0].charAt(charLen - 1);
+
+		var winloc = 'http://localhost:300' + prc_id;
+
+		if( $(btn_id).text() == "Crash"){
+			windows[prc_id].close();
+			delete windows[prc_id];
+		}
+		else{
+			windows[prc_id] = window.open(winloc);
+		}
+	}
 
 	</script>
 </body>

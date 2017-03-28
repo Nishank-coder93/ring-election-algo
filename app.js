@@ -23,8 +23,7 @@ ClassSetup.prototype.config = function (){
 
 ClassSetup.prototype.sockConn = function (){
 	 	this.socket.on('connection', function (sock){
-	 		console.log('connected !');
-	 		sock.emit('test', {hello: ' Hello World'});
+	 		console.log('Server running at http://localhost:3000');
 	 	});
 
 	 	new ipchandler(this.app, this.socket).connect();
