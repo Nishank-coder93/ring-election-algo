@@ -9,8 +9,8 @@
 6 silly lifecycle ring-coordinator@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle ring-coordinator@1.0.0~start: ring-coordinator@1.0.0
 8 verbose lifecycle ring-coordinator@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle ring-coordinator@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Mac-NB/Desktop/Code_Node/new_node/default/node_modules/.bin:/usr/local/Cellar/node/6.9.1/bin:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Mac-NB/Desktop/Code_Node/Node_work/mongodb/mongodb-osx-x86_64-3.2.4/bin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS
-10 verbose lifecycle ring-coordinator@1.0.0~start: CWD: /Users/Mac-NB/Desktop/Code_Node/new_node/default
+9 verbose lifecycle ring-coordinator@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Mac-NB/Desktop/GitHub/Bhatnagar_7098/node_modules/.bin:/usr/local/Cellar/node/6.9.1/bin:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Mac-NB/Desktop/Code_Node/Node_work/mongodb/mongodb-osx-x86_64-3.2.4/bin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/mysql/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin
+10 verbose lifecycle ring-coordinator@1.0.0~start: CWD: /Users/Mac-NB/Desktop/GitHub/Bhatnagar_7098
 11 silly lifecycle ring-coordinator@1.0.0~start: Args: [ '-c', 'node app.js' ]
 12 silly lifecycle ring-coordinator@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle ring-coordinator@1.0.0~start: Failed to exec start script
@@ -25,8 +25,8 @@
 14 verbose stack     at maybeClose (internal/child_process.js:877:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid ring-coordinator@1.0.0
-16 verbose cwd /Users/Mac-NB/Desktop/Code_Node/new_node/default
-17 error Darwin 16.4.0
+16 verbose cwd /Users/Mac-NB/Desktop/GitHub/Bhatnagar_7098
+17 error Darwin 16.5.0
 18 error argv "/usr/local/Cellar/node/6.9.1/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.9.1
 20 error npm  v3.10.8
